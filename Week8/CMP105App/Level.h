@@ -2,6 +2,10 @@
 
 #include <SFML/Graphics.hpp>
 #include "Framework/Input.h"
+#include "Ball.h"
+#include "MousePaddle.h"
+#include "KeyPaddle.h"
+#include "PongBall.h"
 #include <string>
 #include <iostream>
 
@@ -23,4 +27,19 @@ private:
 	// Default variables for level class.
 	sf::RenderWindow* window;
 	Input* input;
+
+	Ball ball1;
+	Ball ball2;
+	sf::Texture ballTexture;
+
+	Ball notBall1;
+	Ball notBall2;
+	sf::Texture notBallTexture;
+
+	PongBall pongBall;
+	KeyPaddle keyPaddle;
+	MousePaddle mousePaddle;
+
+	sf::Text score;
+	sf::Font font;
 };
